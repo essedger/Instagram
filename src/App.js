@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from "./UI/Header";
-import Feed from "./UI/Feed";
+import Header from "./components/Header";
+import Feed from "./components/Feed";
 
 function App() {
   return (
