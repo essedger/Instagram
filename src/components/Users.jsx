@@ -39,7 +39,7 @@ class Users extends Component {
             const {name, altname, photo, src, alt, descr, id}= item;
             return <UserName
                     key={id}
-                    src={src}
+                    src={photo}
                     alt={alt}
                     name={name}
                     min/>
