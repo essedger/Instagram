@@ -36,7 +36,7 @@ class Users extends Component {
 
     static renderItems(arr){
         return arr.map((item) => {
-            const {name, altname, photo, src, alt, descr, id}= item;
+            const {name, photo, alt, id}= item;
             return <UserName
                     key={id}
                     src={photo}
@@ -47,7 +47,7 @@ class Users extends Component {
     }
 
     render() {
-        const{error, posts} = this.state;
+        const {error, posts} = this.state;
         if (error){
             return <ErrorMessage/>
         }
