@@ -12,9 +12,35 @@ class InstagramService {
     };
 
     getAllPosts = async () => {
-        const res = await this.getResource('posts/');
-        return res;
+        return await this.getResource('posts/');
     };
+
+    getAllPhotos = async () => {
+        const res = await this.getResource('posts/');
+        return res.map(this._transformPosts);
+    };
+
+    getAllUsers = async () => {
+        const res = await this.getResource('posts/');
+        return res.map(this.transformUsers);
+    };
+
+    _transformPosts = (post) => {
+        return {
+            src: post.src,
+            alt: post.alt,
+            id: post.id
+        }
+    };
+
+    transformUsers = (post) => {
+        return {
+            name: post.name,
+            src: post.src,
+            alt: post.alt,
+            id: post.id
+        }
+    }
 }
 
 export default InstagramService;

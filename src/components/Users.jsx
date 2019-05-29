@@ -16,7 +16,7 @@ class Users extends Component {
     }
 
     updatePosts() {
-        this.InstagramService.getAllPosts()
+        this.InstagramService.getAllUsers()
             .then(this.onPostsLoaded)
             .catch(this.onError)
     };
@@ -36,10 +36,10 @@ class Users extends Component {
 
     static renderItems(arr){
         return arr.map((item) => {
-            const {name, photo, alt, id}= item;
+            const {name, src, alt, id}= item;
             return <UserName
                     key={id}
-                    src={photo}
+                    src={src}
                     alt={alt}
                     name={name}
                     min/>
