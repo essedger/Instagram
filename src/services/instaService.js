@@ -36,7 +36,7 @@ class InstagramService {
     transformUsers = (post) => {
         return {
             name: post.name,
-            src: post.src,
+            photo: post.photo,
             alt: post.alt,
             id: post.id
         }

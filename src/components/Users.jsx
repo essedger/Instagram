@@ -36,10 +36,10 @@ class Users extends Component {
 
     static renderItems(arr){
         return arr.map((item) => {
-            const {name, src, alt, id}= item;
+            const {name, photo, alt, id}= item;
             return <UserName
                     key={id}
-                    src={src}
+                    src={photo}
                     alt={alt}
                     name={name}
                     min/>
